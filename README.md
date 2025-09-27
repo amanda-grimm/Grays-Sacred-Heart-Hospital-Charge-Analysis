@@ -20,21 +20,33 @@ GSH is a non-profit hospital that largely relies on grants for its funding in or
 
 ## METHODOLOGY
 ### DATA WRANGLING
-1. Sorted cleaned_data by total charges and compared rows with same costs, cross-referencing with other values like birth weight and attending operating providers.
-2. Created a new sheet and used the unique function.
-3. Copied and pasted the values from the unique function results.
-4. Corrected format of zip code values, i.e. changing (121) to 121.
-5. Deleted any rows with OOS in zip code column (4 rows).
-6. Changed Male/Female formats to M/F.
-7. Changed Admission Type to Newborn for any patient marked M that also had CCS Diagnosis mentioning preinatal jaundice and/or APR DRG listing Neonate birthwt.
-8. Separated Payment Typology into 3 separate columns.
-9. Split data into a Mothers sheet and a Newborns sheet.
-
-10. ***SIMPLIFY THIS LIST & ADD A SIMLIFIED LIST BELOW FOR EDA
+1. Deleted all duplicated rows.
+2. Corrected format of zip code values, i.e. changing (121) to 121.
+3. Deleted any rows with OOS in zip code column (4 rows).
+4. Changed Male/Female formats to M/F.
+5. Changed Admission Type to Newborn for any patient marked M that also had CCS Diagnosis mentioning preinatal jaundice and/or APR DRG listing Neonate birthwt.
+6. Separated Payment Typology into 3 separate columns.
+7. Split data into a Mothers sheet and a Newborns sheet.
 
 ### EXPLORATORY DATA ANALYSIS
+1. Created calculated rows for cost-to-charge ratio in each sheet. This metric is the main focus of my analysis in order to answer the business problem.
+2. Created pivot tables to explore relationships. This included comparing Sum of Total Cost, Sum of Total Charge, Average Revenue, and Average Cost-to-Charge Ratio when data was sorted by Count of CCS Procedures, Payment Typology, Type of Procedure, Length of Stay, and Zip Code. These comparisons were broken down by mothers only, newborns only, and all together.
+3. Created visualizations (histograms and scatter plots) to see distributions of data within these relationships and identify outliers and notable observations.
+4. Revisited areas to analyze further, including Severity of Illness and Medical vs Surgical Descriptions.
 
+## SKILLS
+Spreadsheets: column splitting, calculated columns, pivot tables, histograms, scatter plots
+Analysis: identifying most important variables, revisiting information to explore further, identifying notable findings
 
+## RESULTS & RECOMMENDATIONS
+The data showed several areas where the cost-to-charge ratio falls below 50%. The separation of mothers-only and newborn-only data was imperative here, as there were stark differences betweeen the two in areas where improvements are recommended. The business recommendations are as follows:
 
-SKILLS
-Spreadsheets: column splitting, calculated columns, pivot tables, 
+1. Six out of eleven types of procedures provided to newborns resulted in cost to charge ratios below 50%, ranging between  43% and 47%. GSH should increase the amount they charge for these procedures to meet the 50% cost to charge ratio goal.
+
+2. When newborns have stays lasting 1, 3, 4, 5, 6, or 7 nights, their average cost to charge ratio drops below 50%, ranging between 46% and 49%. This indicates that overall, GSH is not charging enough for their services, specifically for newborns. GSH should increase their charging rate for newborns by 1-4% and/or aim for a 2-night stay when possible.
+
+3. When a patient's pay type is classified as self-pay, their cost to charge ratio generally drops below 50% (45% for mothers only, 50% for newborns only, 49% for both groups combined). When looking at only newborns, this ratio drops below 50% when their pay type is through medicaid or a private health insurance. GSH should identify if their contracts with these organizations indicate a lower reimbursement rate and increase the amount charged for these patients by 1-5%.
+
+## NEXT STEPS
+1. Create a live dashboard that updates this information regularly and is available to administrators to make decisions on throughout the year.
+2. Analyze contracts with insurance providers and re-negotiate reimbursements rate where possible.
