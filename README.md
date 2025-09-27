@@ -4,7 +4,8 @@
 
 This project features an exploratory data analysis for Gray's Sacred Heart (GSH), a maternal health hospital, focused on patient charges. The data for this project was provided for me via Pathstream. I cleaned, wrangled, analyzed, and visualized the data using google sheets. The data was analyzed as a whole, and then further analyzed when broken down into newborn only and mother only. After identifying causes for disparities in charges, I recommend the following changes to keep GSH's cost-to-charge ratio near 50%:
 
-  1. Increase charges for the following newborn procedures by 7-3% ***insert photo here****
+  1. Increase charges for the following newborn procedures by 7-3% (those in red)
+     ![Image Alt]([image_url](https://github.com/amanda-grimm/Grays-Sacred-Heart-Hospital-Charge-Analysis/blob/20a6d16a4b44a8bbb065a0e76d81bfd226c5c476/images/newborn%20procedures%20only.png ))
   2. Aim for 2-night stays for newborns
   3. Increase charges for self-pay patients by 1-5%
  
